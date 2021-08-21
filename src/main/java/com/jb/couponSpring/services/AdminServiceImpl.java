@@ -42,13 +42,13 @@ public class AdminServiceImpl extends ClientService implements AdminService{
     }
 
     @Override
+    @Transactional
     public void deleteCompany(int companyId) throws CouponSystemException {
 
         if (!this.companyRepository.existsById(companyId)) {
             throw new CouponSystemException(ErrorMsg.COMPANY_DOES_NOT_EXISTS);
         }
 
-        //todo test delete coupons
         this.companyRepository
                 .getById(companyId).getCoupons()
                 .forEach(coupon -> this.couponRepository.deleteAllCouponPurchases(coupon.getId()));
@@ -89,7 +89,6 @@ public class AdminServiceImpl extends ClientService implements AdminService{
     @Override
     @Transactional
     public void deleteCustomer(int customerId) {
-        //todo test delete coupons
         this.couponRepository.deleteAllCustomerPurchases(customerId);
         this.customerRepository.deleteById(customerId);
     }

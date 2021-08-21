@@ -22,7 +22,15 @@ public class UseCaseAdminService implements CommandLineRunner {
 
         System.out.println(">---------------- UseCaseAdminService ------------------");
 
-        System.out.println(">---------------- UseCaseAdminService::Test Login ------------------");
+        System.out.println(">---------------- UseCaseAdminService::Test Wrong Login ------------------");
+
+        if (((AdminServiceImpl)adminService).login("test@admin.com", "test")) {
+            System.out.println("Wellcome admin!");
+        } else {
+            System.out.println("Worng admin user / password !!!");
+        }
+
+        System.out.println(">---------------- UseCaseAdminService::Test Good Login ------------------");
 
         if (((AdminServiceImpl)adminService).login("admin@admin.com", "admin")) {
             System.out.println("Wellcome admin!");

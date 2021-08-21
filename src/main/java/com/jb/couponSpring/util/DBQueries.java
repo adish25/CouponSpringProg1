@@ -52,4 +52,12 @@ public class DBQueries {
     public static final String QUERY_DELETE_EXPIRED_COUPONS = "" +
             "DELETE FROM `coupon-p2`.coupons WHERE `ID` > 0 AND end_date < :end_date";
 
+    public static final String ADD_PURCHASE = "" +
+            "INSERT INTO `coupon-p2`.`customers_coupons`\n" +
+            "(`customer_id`,\n" +
+            "`coupons_id`)\n" +
+            "VALUES\n" +
+            "(:customer_id,\n" +
+            ":coupon_id)";
+
 }

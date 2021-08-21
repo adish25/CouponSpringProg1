@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
 import java.util.List;
@@ -54,5 +55,10 @@ public interface CouponRepository extends JpaRepository<Coupon, Integer> {
     @Modifying
     @Query(value = DBQueries.QUERY_DELETE_EXPIRED_COUPONS, nativeQuery = true)
     void deleteExpiredCoupons(@Param("end_date") Date expirationDate);
+
+    @Transactional
+    @Modifying
+    @Query(value = DBQueries.ADD_PURCHASE, nativeQuery = true)
+    void insertPurchase(@Param("customer_id") int customerId, @Param("coupon_id") int couponId);
 
 }

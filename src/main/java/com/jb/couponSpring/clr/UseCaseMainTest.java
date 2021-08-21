@@ -317,7 +317,26 @@ public class UseCaseMainTest implements CommandLineRunner {
 
 
         System.out.println(">-------Test delete company ------------------");
+        // add coupon and purchase
+        Coupon p1 = Coupon.builder()
+                .title("admin test 1")
+                .description("admin test 1")
+                .amount(50)
+                .price(500)
+                .category(Category.VACATION)
+                .image("http://admintest1...")
+                .startDate(Date.valueOf(LocalDate.now()))
+                .endDate(Date.valueOf(LocalDate.now().plusMonths(1)))
+                .company(companyRepository.getById(id))
+                .build();
+        couponRepository.saveAndFlush(p1);
+
         System.out.println("delete company -> " + adminService.getSingleCompany(id));
+        System.out.println("delete company coupons -> " + adminService.getSingleCompany(id).getCoupons());
+
+        couponRepository.insertPurchase(1,
+                couponRepository.findByCompanyIdAndTitle(id,"admin test 1").getId());
+
         try {
             adminService.deleteCompany(id);
         } catch (Exception e) {
@@ -372,6 +391,23 @@ public class UseCaseMainTest implements CommandLineRunner {
         adminService.getAllCustomers().forEach(System.out::println);
 
         System.out.println(">------Test delete customer and coupons ------------------");
+        // add coupon and purchase
+        id = 1;
+        p1 = Coupon.builder()
+                .title("admin test 2")
+                .description("admin test 2")
+                .amount(50)
+                .price(500)
+                .category(Category.VACATION)
+                .image("http://admintest2...")
+                .startDate(Date.valueOf(LocalDate.now()))
+                .endDate(Date.valueOf(LocalDate.now().plusMonths(1)))
+                .company(companyRepository.getById(id))
+                .build();
+        couponRepository.saveAndFlush(p1);
+        couponRepository.insertPurchase(s1.getId(),
+                couponRepository.findByCompanyIdAndTitle(id,"admin test 2").getId());
+
         try {
             adminService.deleteCustomer(s1.getId());
         } catch (Exception e) {
@@ -379,5 +415,6 @@ public class UseCaseMainTest implements CommandLineRunner {
         }
         System.out.println(">----- list of customers after delete");
         adminService.getAllCustomers().forEach(System.out::println);
+
     }
 }
