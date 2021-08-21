@@ -1,0 +1,318 @@
+"C:\Program Files\Java\jdk-11.0.10\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\lib\idea_rt.jar=63900:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\adish\BHJavaCourse\SpringBoot\couponSpring\target\classes;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.5.2\spring-boot-starter-data-jpa-2.5.2.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.5.2\spring-boot-starter-aop-2.5.2.jar;C:\Users\adish\.m2\repository\org\springframework\spring-aop\5.3.8\spring-aop-5.3.8.jar;C:\Users\adish\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.5.2\spring-boot-starter-jdbc-2.5.2.jar;C:\Users\adish\.m2\repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar;C:\Users\adish\.m2\repository\org\springframework\spring-jdbc\5.3.8\spring-jdbc-5.3.8.jar;C:\Users\adish\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\adish\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\adish\.m2\repository\org\hibernate\hibernate-core\5.4.32.Final\hibernate-core-5.4.32.Final.jar;C:\Users\adish\.m2\repository\org\jboss\logging\jboss-logging\3.4.2.Final\jboss-logging-3.4.2.Final.jar;C:\Users\adish\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\adish\.m2\repository\net\bytebuddy\byte-buddy\1.10.22\byte-buddy-1.10.22.jar;C:\Users\adish\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\adish\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\adish\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\adish\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\adish\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\adish\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.4\jaxb-runtime-2.3.4.jar;C:\Users\adish\.m2\repository\org\glassfish\jaxb\txw2\2.3.4\txw2-2.3.4.jar;C:\Users\adish\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\adish\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\adish\.m2\repository\org\springframework\data\spring-data-jpa\2.5.2\spring-data-jpa-2.5.2.jar;C:\Users\adish\.m2\repository\org\springframework\data\spring-data-commons\2.5.2\spring-data-commons-2.5.2.jar;C:\Users\adish\.m2\repository\org\springframework\spring-orm\5.3.8\spring-orm-5.3.8.jar;C:\Users\adish\.m2\repository\org\springframework\spring-context\5.3.8\spring-context-5.3.8.jar;C:\Users\adish\.m2\repository\org\springframework\spring-tx\5.3.8\spring-tx-5.3.8.jar;C:\Users\adish\.m2\repository\org\springframework\spring-beans\5.3.8\spring-beans-5.3.8.jar;C:\Users\adish\.m2\repository\org\slf4j\slf4j-api\1.7.31\slf4j-api-1.7.31.jar;C:\Users\adish\.m2\repository\org\springframework\spring-aspects\5.3.8\spring-aspects-5.3.8.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.5.2\spring-boot-starter-web-2.5.2.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-starter\2.5.2\spring-boot-starter-2.5.2.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.5.2\spring-boot-starter-logging-2.5.2.jar;C:\Users\adish\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\adish\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\adish\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.14.1\log4j-to-slf4j-2.14.1.jar;C:\Users\adish\.m2\repository\org\apache\logging\log4j\log4j-api\2.14.1\log4j-api-2.14.1.jar;C:\Users\adish\.m2\repository\org\slf4j\jul-to-slf4j\1.7.31\jul-to-slf4j-1.7.31.jar;C:\Users\adish\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\adish\.m2\repository\org\yaml\snakeyaml\1.28\snakeyaml-1.28.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.5.2\spring-boot-starter-json-2.5.2.jar;C:\Users\adish\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.3\jackson-databind-2.12.3.jar;C:\Users\adish\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.3\jackson-annotations-2.12.3.jar;C:\Users\adish\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.3\jackson-core-2.12.3.jar;C:\Users\adish\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.12.3\jackson-datatype-jdk8-2.12.3.jar;C:\Users\adish\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.3\jackson-datatype-jsr310-2.12.3.jar;C:\Users\adish\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.12.3\jackson-module-parameter-names-2.12.3.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.5.2\spring-boot-starter-tomcat-2.5.2.jar;C:\Users\adish\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.48\tomcat-embed-core-9.0.48.jar;C:\Users\adish\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.48\tomcat-embed-el-9.0.48.jar;C:\Users\adish\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.48\tomcat-embed-websocket-9.0.48.jar;C:\Users\adish\.m2\repository\org\springframework\spring-web\5.3.8\spring-web-5.3.8.jar;C:\Users\adish\.m2\repository\org\springframework\spring-webmvc\5.3.8\spring-webmvc-5.3.8.jar;C:\Users\adish\.m2\repository\org\springframework\spring-expression\5.3.8\spring-expression-5.3.8.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-devtools\2.5.2\spring-boot-devtools-2.5.2.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot\2.5.2\spring-boot-2.5.2.jar;C:\Users\adish\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.5.2\spring-boot-autoconfigure-2.5.2.jar;C:\Users\adish\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar;C:\Users\adish\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar;C:\Users\adish\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\adish\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\adish\.m2\repository\org\springframework\spring-core\5.3.8\spring-core-5.3.8.jar;C:\Users\adish\.m2\repository\org\springframework\spring-jcl\5.3.8\spring-jcl-5.3.8.jar com.jb.couponSpring.CouponSpringApplication
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.2)
+
+2021-08-21 14:41:54.345  INFO 18548 --- [  restartedMain] c.j.c.CouponSpringApplication            : Starting CouponSpringApplication using Java 11.0.10 on DESKTOP-A030768 with PID 18548 (C:\Users\adish\BHJavaCourse\SpringBoot\couponSpring\target\classes started by adish in C:\Users\adish\BHJavaCourse\SpringBoot\couponSpring)
+2021-08-21 14:41:54.349  INFO 18548 --- [  restartedMain] c.j.c.CouponSpringApplication            : No active profile set, falling back to default profiles: default
+2021-08-21 14:41:54.498  INFO 18548 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-21 14:41:54.498  INFO 18548 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-21 14:41:56.171  INFO 18548 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-21 14:41:56.380  INFO 18548 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 3 JPA repository interfaces.
+2021-08-21 14:41:58.445  INFO 18548 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-21 14:41:58.461  INFO 18548 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-21 14:41:58.461  INFO 18548 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-08-21 14:41:58.616  INFO 18548 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-21 14:41:58.616  INFO 18548 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4117 ms
+2021-08-21 14:41:58.955  INFO 18548 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-21 14:41:59.056  INFO 18548 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-08-21 14:41:59.326  INFO 18548 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-21 14:41:59.525  INFO 18548 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-21 14:42:00.050  INFO 18548 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-21 14:42:00.079  INFO 18548 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-08-21 14:42:06.076  INFO 18548 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-21 14:42:06.100  INFO 18548 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-21 14:42:07.022  WARN 18548 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-21 14:42:07.500  INFO 18548 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-21 14:42:07.547  INFO 18548 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-21 14:42:07.561  INFO 18548 --- [  restartedMain] c.j.c.CouponSpringApplication            : Started CouponSpringApplication in 14.053 seconds (JVM running for 15.302)
+>---------------- Bootstrap :: preparing test data ------------------
+*********** CouponExpirationDailyJob is running **************
+Company(id=1, name=Golf, email=golf.co.il, password=golf)
+Company(id=2, name=Taizu, email=taizu.co.il, password=taizu)
+Company(id=3, name=Fly East, email=flyeast.co.il, password=flyeast)
+Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[])
+Customer(id=2, firstName=Yuval, lastName=Shetrit, email=yuval@gmail.com, password=123, coupons=[])
+Customer(id=3, firstName=Maor, lastName=Shetrit, email=maor@gmail.com, password=123, coupons=[])
+Customer(id=4, firstName=Alon, lastName=Shetrit, email=alon@gmail.com, password=123, coupons=[])
+Coupon(id=1, category=FOOD, title=free drink, description=taizu free drink, startDate=2021-08-21, endDate=2021-09-04, amount=50, price=30.0, image=http://t...)
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+>---------------- UseCaseAdminService ------------------
+>---------------- UseCaseAdminService::Test Wrong Login ------------------
+Worng admin user / password !!!
+>---------------- UseCaseAdminService::Test Good Login ------------------
+Wellcome admin!
+>---------------- UseCaseAdminService::Test add company ------------------
+>----- try to add company with existing name
+Company(id=0, name=Golf, email=golf.co.il, password=golf)
+cannot add company with exiting email
+>----- try to add company with existing email
+cannot add company with exiting email
+Company(id=1, name=Golf, email=golf.co.il, password=golf)
+Company(id=2, name=Taizu, email=taizu.co.il, password=taizu)
+Company(id=3, name=Fly East, email=flyeast.co.il, password=flyeast)
+Company(id=4, name=Golg & co, email=golfnco.co.il, password=golf)
+>---------------- UseCaseAdminService::Test update company ------------------
+>----- try to update company that does not exist
+Company does not exists
+>----- try to update company name
+Admin cannot update company name
+>----- test a good update
+Company(id=1, name=Golf, email=golf.co.il, password=golf)
+Company(id=2, name=Taizu, email=taizu.co.il, password=taizu)
+Company(id=3, name=Fly East, email=flyeast.co.il, password=flyeast)
+Company(id=4, name=Golg & co, email=golfandco.co.il, password=golf)
+>---------------- UseCaseAdminService::Test delete company ------------------
+delete company -> Company(id=3, name=Fly East, email=flyeast.co.il, password=flyeast)
+Company(id=1, name=Golf, email=golf.co.il, password=golf)
+Company(id=2, name=Taizu, email=taizu.co.il, password=taizu)
+Company(id=4, name=Golg & co, email=golfandco.co.il, password=golf)
+>---------------- UseCaseAdminService::Test add customer ------------------
+>----- try to add customer with existing email
+Customer(id=0, firstName=Ruhama, lastName=Shetrit, email=alon@gmail.com, password=123, coupons=[])
+Customer with the same email already exists
+>----- try a good add customer
+Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[])
+Customer(id=2, firstName=Yuval, lastName=Shetrit, email=yuval@gmail.com, password=123, coupons=[])
+Customer(id=3, firstName=Maor, lastName=Shetrit, email=maor@gmail.com, password=123, coupons=[])
+Customer(id=4, firstName=Alon, lastName=Shetrit, email=alon@gmail.com, password=123, coupons=[])
+Customer(id=5, firstName=Ruhama, lastName=Shetrit, email=ruhama@gmail.com, password=123, coupons=[])
+>---------------- UseCaseAdminService::Test update customer ------------------
+>----- try to update customer that does not exist
+Customer does not exists
+>----- test a good update
+Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[])
+Customer(id=2, firstName=Yuval, lastName=Shetrit, email=yuval@gmail.com, password=123, coupons=[])
+Customer(id=3, firstName=Maor, lastName=Shetrit, email=maor@gmail.com, password=123, coupons=[])
+Customer(id=4, firstName=Alon, lastName=Shetrit, email=alon@gmail.com, password=123, coupons=[])
+Customer(id=5, firstName=Ruhama, lastName=Shetrit, email=ruhamaUPD@gmail.com, password=123, coupons=[])
+>---------------- UseCaseAdminService::Test delete customer ------------------
+Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[])
+Customer(id=2, firstName=Yuval, lastName=Shetrit, email=yuval@gmail.com, password=123, coupons=[])
+Customer(id=3, firstName=Maor, lastName=Shetrit, email=maor@gmail.com, password=123, coupons=[])
+Customer(id=4, firstName=Alon, lastName=Shetrit, email=alon@gmail.com, password=123, coupons=[])
+Customer(id=5, firstName=Ruhama, lastName=Shetrit, email=ruhamaUPD@gmail.com, password=123, coupons=[])
+Customer(id=6, firstName=To, lastName=Delete, email=todelete@gmail.com, password=123, coupons=[])
+Customer(id=6, firstName=To, lastName=Delete, email=todelete@gmail.com, password=123, coupons=[])
+>----- list of customers after delete
+Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[])
+Customer(id=2, firstName=Yuval, lastName=Shetrit, email=yuval@gmail.com, password=123, coupons=[])
+Customer(id=3, firstName=Maor, lastName=Shetrit, email=maor@gmail.com, password=123, coupons=[])
+Customer(id=4, firstName=Alon, lastName=Shetrit, email=alon@gmail.com, password=123, coupons=[])
+Customer(id=5, firstName=Ruhama, lastName=Shetrit, email=ruhamaUPD@gmail.com, password=123, coupons=[])
+>---------------- UseCaseCompanyService ------------------
+>---------------- UseCaseCompanyService::Test Login ------------------
+Wellcome !!!Company(id=1, name=Golf, email=golf.co.il, password=golf)
+
+>>>----- try to add coupon with the same title -----
+Company can't add coupon of the same company with the same title
+
+>>>----- try to add coupon after changing the title -----
+
+>>>----- print all company coupons -----
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% new, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+
+>>>----- print all company coupons, by category -----
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% new, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+
+>>>----- try to update coupon's company id -----
+Company can't update a coupon's company id
+
+>>>----- try to update a coupons that does not exists -----
+Coupon does not exists
+
+>>>----- test a good update of coupon title -----
+
+>>>----- print all company coupons -----
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% updated, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+>---------------- UseCaseCustomerService ------------------
+>---------------- UseCaseCustomerService::Test Login ------------------
+Wellcome !!!Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[])
+
+>>>----- add coupon purchase -----
+>---------------- UseCaseLoginManager ------------------
+>---------------- UseCaseLoginManager::Test Admin Login ------------------
+Company(id=1, name=Golf, email=golf.co.il, password=golf)
+Company(id=2, name=Taizu, email=taizu.co.il, password=taizu)
+Company(id=4, name=Golg & co, email=golfandco.co.il, password=golf)
+>---------------- UseCaseLoginManager::Test Company Login ------------------
+Company(id=1, name=Golf, email=golf.co.il, password=golf)
+>---------------- UseCaseLoginManager::Test Customer Login ------------------
+Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[Coupon(id=4, category=VACATION, title=fly USA 50%, description=fly USA 50%, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://flyusa...)])
+>---------------- UseCaseLoginManager::Test another Company Login ------------------
+Company(id=2, name=Taizu, email=taizu.co.il, password=taizu)
+>---------------- UseCaseLoginManager::Test another Customer Login ------------------
+Customer(id=3, firstName=Maor, lastName=Shetrit, email=maor@gmail.com, password=123, coupons=[])
+>---------------- UseCaseMainTest ------------------
+>---------------- UseCaseMainTest::Admin Login ------------------
+ █████╗ ██████╗ ███╗   ███╗██╗███╗   ██╗    ███████╗ █████╗  ██████╗ █████╗ ██████╗ ███████╗    ████████╗███████╗███████╗████████╗  
+██╔══██╗██╔══██╗████╗ ████║██║████╗  ██║    ██╔════╝██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝    ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝  
+███████║██║  ██║██╔████╔██║██║██╔██╗ ██║    █████╗  ███████║██║     ███████║██║  ██║█████╗         ██║   █████╗  ███████╗   ██║     
+██╔══██║██║  ██║██║╚██╔╝██║██║██║╚██╗██║    ██╔══╝  ██╔══██║██║     ██╔══██║██║  ██║██╔══╝         ██║   ██╔══╝  ╚════██║   ██║     
+██║  ██║██████╔╝██║ ╚═╝ ██║██║██║ ╚████║    ██║     ██║  ██║╚██████╗██║  ██║██████╔╝███████╗       ██║   ███████╗███████║   ██║     
+╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚══════╝       ╚═╝   ╚══════╝╚══════╝   ╚═╝     
+                                                         
+>----- try to add company with existing name
+Company(id=0, name=Golf, email=golf.co.il, password=fox)
+cannot add company with exiting email
+>----- try to add company with existing email
+cannot add company with exiting email
+Company(id=1, name=Golf, email=golf.co.il, password=golf)
+Company(id=2, name=Taizu, email=taizu.co.il, password=taizu)
+Company(id=5, name=Fox, email=fox.co.il, password=fox)
+Company(id=4, name=Golg & co, email=golfandco.co.il, password=golf)
+>----- try to update company that does not exist
+Company does not exists
+>----- try to update company name
+Admin cannot update company name
+>----- test a good update
+Company(id=1, name=Golf, email=golf.co.il, password=golf)
+Company(id=2, name=Taizu, email=taizu.co.il, password=taizu)
+Company(id=5, name=Fox, email=golfandco.co.il, password=fox)
+Company(id=4, name=Golg & co, email=golfandco.co.il, password=golf)
+>-------Test delete company ------------------
+delete company -> Company(id=5, name=Fox, email=golfandco.co.il, password=fox)
+delete company coupons -> [Coupon(id=5, category=VACATION, title=admin test 1, description=admin test 1, startDate=2021-08-21, endDate=2021-09-21, amount=50, price=500.0, image=http://admintest1...)]
+Company(id=1, name=Golf, email=golf.co.il, password=golf)
+Company(id=2, name=Taizu, email=taizu.co.il, password=taizu)
+Company(id=4, name=Golg & co, email=golfandco.co.il, password=golf)
+>------Test add customer ------------------
+>----- try to add customer with existing email
+Customer(id=0, firstName=Yosi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[])
+Customer with the same email already exists
+>----- try a good add customer
+Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[Coupon(id=4, category=VACATION, title=fly USA 50%, description=fly USA 50%, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://flyusa...)])
+Customer(id=2, firstName=Yuval, lastName=Shetrit, email=yuval@gmail.com, password=123, coupons=[])
+Customer(id=3, firstName=Maor, lastName=Shetrit, email=maor@gmail.com, password=123, coupons=[])
+Customer(id=4, firstName=Alon, lastName=Shetrit, email=alon@gmail.com, password=123, coupons=[])
+Customer(id=5, firstName=Ruhama, lastName=Shetrit, email=ruhamaUPD@gmail.com, password=123, coupons=[])
+Customer(id=7, firstName=Yosi, lastName=Shetrit, email=yosi@gmail.com, password=123, coupons=[])
+>------Test update customer ------------------
+>----- try to update customer that does not exist
+Customer does not exists
+>----- test a good update
+Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[Coupon(id=4, category=VACATION, title=fly USA 50%, description=fly USA 50%, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://flyusa...)])
+Customer(id=2, firstName=Yuval, lastName=Shetrit, email=yuval@gmail.com, password=123, coupons=[])
+Customer(id=3, firstName=Maor, lastName=Shetrit, email=maor@gmail.com, password=123, coupons=[])
+Customer(id=4, firstName=Alon, lastName=Shetrit, email=alon@gmail.com, password=123, coupons=[])
+Customer(id=5, firstName=Ruhama, lastName=Shetrit, email=ruhamaUPD@gmail.com, password=123, coupons=[])
+Customer(id=7, firstName=Yosi, lastName=Shetrit, email=yosiUPD@gmail.com, password=123, coupons=[])
+>------Test delete customer and coupons ------------------
+>----- list of customers after delete
+Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[Coupon(id=4, category=VACATION, title=fly USA 50%, description=fly USA 50%, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://flyusa...)])
+Customer(id=2, firstName=Yuval, lastName=Shetrit, email=yuval@gmail.com, password=123, coupons=[])
+Customer(id=3, firstName=Maor, lastName=Shetrit, email=maor@gmail.com, password=123, coupons=[])
+Customer(id=4, firstName=Alon, lastName=Shetrit, email=alon@gmail.com, password=123, coupons=[])
+Customer(id=5, firstName=Ruhama, lastName=Shetrit, email=ruhamaUPD@gmail.com, password=123, coupons=[])
+>---------------- UseCaseMainTest::Company Login ------------------
+ ██████╗ ██████╗ ███╗   ███╗██████╗  █████╗ ███╗   ██╗██╗   ██╗    ███████╗ █████╗  ██████╗ █████╗ ██████╗ ███████╗    ████████╗███████╗███████╗████████╗
+██╔════╝██╔═══██╗████╗ ████║██╔══██╗██╔══██╗████╗  ██║╚██╗ ██╔╝    ██╔════╝██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝    ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+██║     ██║   ██║██╔████╔██║██████╔╝███████║██╔██╗ ██║ ╚████╔╝     █████╗  ███████║██║     ███████║██║  ██║█████╗         ██║   █████╗  ███████╗   ██║   
+██║     ██║   ██║██║╚██╔╝██║██╔═══╝ ██╔══██║██║╚██╗██║  ╚██╔╝      ██╔══╝  ██╔══██║██║     ██╔══██║██║  ██║██╔══╝         ██║   ██╔══╝  ╚════██║   ██║   
+╚██████╗╚██████╔╝██║ ╚═╝ ██║██║     ██║  ██║██║ ╚████║   ██║       ██║     ██║  ██║╚██████╗██║  ██║██████╔╝███████╗       ██║   ███████╗███████║   ██║   
+ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝       ╚═╝     ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚══════╝       ╚═╝   ╚══════╝╚══════╝   ╚═╝   
+                                                         
+
+>>>----- testCompanyService :: Current company: Company(id=1, name=Golf, email=golf.co.il, password=golf)
+
+>>>----- try to add coupon with the same title -----
+Company can't add coupon of the same company with the same title
+
+>>>----- try to add coupon after changing the title -----
+
+>>>----- print all company coupons -----
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% updated, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+Coupon(id=6, category=VACATION, title=admin test 2, description=admin test 2, startDate=2021-08-21, endDate=2021-09-21, amount=50, price=500.0, image=http://admintest2...)
+Coupon(id=7, category=FASHION, title=fox 50%, description=fox 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://fox50...)
+
+>>>----- print all company coupons, by category -----
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% updated, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+Coupon(id=7, category=FASHION, title=fox 50%, description=fox 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://fox50...)
+
+>>>----- print all company coupons, by max price -----
+Coupon(id=1, category=FOOD, title=free drink, description=taizu free drink, startDate=2021-08-21, endDate=2021-09-04, amount=50, price=30.0, image=http://t...)
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% updated, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+Coupon(id=7, category=FASHION, title=fox 50%, description=fox 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://fox50...)
+
+>>>----- try to update coupon's company id -----
+Company can't update a coupon's company id
+
+>>>----- try to update a coupons that does not exists -----
+Coupon does not exists
+
+>>>----- test a good update of coupon title -----
+Coupon does not exists
+
+>>>----- test delete coupons and purchase history -----
+
+>>>----- print all company coupons -----
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% updated, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+Coupon(id=6, category=VACATION, title=admin test 2, description=admin test 2, startDate=2021-08-21, endDate=2021-09-21, amount=50, price=500.0, image=http://admintest2...)
+Coupon(id=7, category=FASHION, title=fox 50%, description=fox 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://fox50...)
+Coupon(id=8, category=VACATION, title=comp test 1, description=comp test 1, startDate=2021-08-21, endDate=2021-09-21, amount=50, price=500.0, image=http://comptest1...)
+
+>>>----- print all company coupons after delete -----
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% updated, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+Coupon(id=6, category=VACATION, title=admin test 2, description=admin test 2, startDate=2021-08-21, endDate=2021-09-21, amount=50, price=500.0, image=http://admintest2...)
+Coupon(id=7, category=FASHION, title=fox 50%, description=fox 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://fox50...)
+>---------------- UseCaseMainTest::Customer Login ------------------
+ ██████╗██╗   ██╗███████╗████████╗ ██████╗ ███╗   ███╗███████╗██████╗     ███████╗ █████╗  ██████╗ █████╗ ██████╗ ███████╗    ████████╗███████╗███████╗████████╗ 
+██╔════╝██║   ██║██╔════╝╚══██╔══╝██╔═══██╗████╗ ████║██╔════╝██╔══██╗    ██╔════╝██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝    ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝ 
+██║     ██║   ██║███████╗   ██║   ██║   ██║██╔████╔██║█████╗  ██████╔╝    █████╗  ███████║██║     ███████║██║  ██║█████╗         ██║   █████╗  ███████╗   ██║    
+██║     ██║   ██║╚════██║   ██║   ██║   ██║██║╚██╔╝██║██╔══╝  ██╔══██╗    ██╔══╝  ██╔══██║██║     ██╔══██║██║  ██║██╔══╝         ██║   ██╔══╝  ╚════██║   ██║    
+╚██████╗╚██████╔╝███████║   ██║   ╚██████╔╝██║ ╚═╝ ██║███████╗██║  ██║    ██║     ██║  ██║╚██████╗██║  ██║██████╔╝███████╗       ██║   ███████╗███████║   ██║    
+ ╚═════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚══════╝       ╚═╝   ╚══════╝╚══════╝   ╚═╝    
+                                                         
+
+>>>----- testCustomerService :: Current customer: Customer(id=1, firstName=Adi, lastName=Shetrit, email=adi@gmail.com, password=123, coupons=[Coupon(id=4, category=VACATION, title=fly USA 50%, description=fly USA 50%, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://flyusa...)])
+
+>>>----- add coupon purchase -----
+
+>>>----- print all customer coupons -----
+Coupon(id=4, category=VACATION, title=fly USA 50%, description=fly USA 50%, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://flyusa...)
+Coupon(id=6, category=VACATION, title=admin test 2, description=admin test 2, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://admintest2...)
+
+>>>----- print all customer coupons by category -----
+Coupon(id=4, category=VACATION, title=fly USA 50%, description=fly USA 50%, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://flyusa...)
+Coupon(id=6, category=VACATION, title=admin test 2, description=admin test 2, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://admintest2...)
+
+>>>----- print all customer coupons by max price -----
+Coupon(id=1, category=FOOD, title=free drink, description=taizu free drink, startDate=2021-08-21, endDate=2021-09-04, amount=50, price=30.0, image=http://t...)
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% updated, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+Coupon(id=7, category=FASHION, title=fox 50%, description=fox 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://fox50...)
+Coupon(id=9, category=VACATION, title=Club Med 25%, description=Club Med 25%, startDate=2021-08-21, endDate=2021-09-21, amount=50, price=150.0, image=http://clubmed25...)
+>---------------- UseCaseMainTest::CouponExpirationDailyJob ------------------
+>---------------- testDailyJob::Coupon added before delete ------------------
+Coupon(id=10, category=VACATION, title=Test 1, description=Test 1, startDate=2021-08-14, endDate=2021-08-22, amount=50, price=500.0, image=http://test1...)
+Coupon(id=11, category=VACATION, title=Test 2, description=Test 2, startDate=2021-08-14, endDate=2021-08-22, amount=50, price=500.0, image=http://test2...)
+*********** CouponExpirationDailyJob is running **************
+>---------------- testDailyJob::Coupon after delete ------------------
+Coupon(id=1, category=FOOD, title=free drink, description=taizu free drink, startDate=2021-08-21, endDate=2021-09-04, amount=50, price=30.0, image=http://t...)
+Coupon(id=2, category=FASHION, title=golf 50%, description=golf 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50...)
+Coupon(id=3, category=FASHION, title=golf 50% updated, description=golf 50% new, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://golf50new...)
+Coupon(id=4, category=VACATION, title=fly USA 50%, description=fly USA 50%, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://flyusa...)
+Coupon(id=6, category=VACATION, title=admin test 2, description=admin test 2, startDate=2021-08-21, endDate=2021-09-21, amount=49, price=500.0, image=http://admintest2...)
+Coupon(id=7, category=FASHION, title=fox 50%, description=fox 50%, startDate=2021-08-21, endDate=2021-09-21, amount=100, price=50.99, image=http://fox50...)
+Coupon(id=9, category=VACATION, title=Club Med 25%, description=Club Med 25%, startDate=2021-08-21, endDate=2021-09-21, amount=50, price=150.0, image=http://clubmed25...)
+******* Purchase also deleted - coupon test 1 ******* 
+******* Purchase also deleted - coupon test 2 ******* 
+coupon spring project is running....
+*********** CouponExpirationDailyJob is running **************
+*********** CouponExpirationDailyJob is running **************
+*********** CouponExpirationDailyJob is running **************
+
+Process finished with exit code -1
