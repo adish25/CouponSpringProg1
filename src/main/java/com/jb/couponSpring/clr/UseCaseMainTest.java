@@ -194,6 +194,9 @@ public class UseCaseMainTest implements CommandLineRunner {
     }
 
     private void testCompanyService() throws SQLException {
+
+        Company currCompany = companyService.getCompany();
+
         System.out.println("\n>>>----- try to add coupon with the same title -----");
         Coupon p1 = Coupon.builder()
                 .title("golf 50%")
@@ -227,6 +230,9 @@ public class UseCaseMainTest implements CommandLineRunner {
         System.out.println("\n>>>----- print all company coupons, by category -----");
         companyService.getCompanyCoupons(Category.FASHION).forEach(System.out::println);
 
+        System.out.println("\n>>>----- print all company coupons, by max price -----");
+        companyService.getCouponsByCompanyPrice().forEach(System.out::println);
+
         System.out.println("\n>>>----- try to update coupon's company id -----");
         p1.getCompany().setId(999);
         try {
@@ -253,8 +259,35 @@ public class UseCaseMainTest implements CommandLineRunner {
             System.out.println(e.getMessage());
         }
 
+        System.out.println("\n>>>----- test delete coupons and purchase history -----");
+
+        p1 = Coupon.builder()
+                .title("comp test 1")
+                .description("comp test 1")
+                .amount(50)
+                .price(500)
+                .category(Category.VACATION)
+                .image("http://comptest1...")
+                .startDate(Date.valueOf(LocalDate.now()))
+                .endDate(Date.valueOf(LocalDate.now().plusMonths(1)))
+                .company(currCompany)
+                .build();
+        couponRepository.saveAndFlush(p1);
+        p1 = couponRepository.findByCompanyIdAndTitle(currCompany.getId(),"comp test 1");
+        couponRepository.insertPurchase(1, p1.getId());
+
         System.out.println("\n>>>----- print all company coupons -----");
         companyService.getCompanyCoupons().forEach(System.out::println);
+
+        try {
+            companyService.deleteCoupon(p1.getId());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println("\n>>>----- print all company coupons after delete -----");
+        companyService.getCompanyCoupons().forEach(System.out::println);
+
     }
 
     private void testAdminService() {

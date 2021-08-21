@@ -5,9 +5,11 @@ import com.jb.couponSpring.beans.Company;
 import com.jb.couponSpring.beans.Coupon;
 import com.jb.couponSpring.exceptions.CouponSystemException;
 import com.jb.couponSpring.exceptions.ErrorMsg;
+import lombok.Data;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -55,8 +57,9 @@ public class CompanyServiceImpl extends ClientService implements CompanyService 
     }
 
     @Override
+    @Transactional
     public void deleteCoupon(int couponId) throws CouponSystemException {
-        //todo - test
+
         Coupon c = this.couponRepository.getById(couponId);
 
         if (c == null) {
@@ -86,6 +89,11 @@ public class CompanyServiceImpl extends ClientService implements CompanyService 
 
     @Override
     public Company getCompanyByEmailPassword(String email, String password) {
-        return companyRepository.findByEmailAndPassword(email, password);
+        return this.companyRepository.findByEmailAndPassword(email, password);
+    }
+
+    @Override
+    public Company getCompany() {
+        return this.companyRepository.getById(this.companyID);
     }
 }
