@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.sql.Date;
 import java.util.List;
 
 public interface CouponRepository extends JpaRepository<Coupon, Integer> {
@@ -32,7 +33,16 @@ public interface CouponRepository extends JpaRepository<Coupon, Integer> {
     @Query(value = DBQueries.QUERY_CUSTOMER_COUPONS_BY_CATEGORY, nativeQuery = true)
     List<Coupon> getCustomerCouponsByCategory(@Param("customer_id") int customerId, @Param("category_id") int categoryId);
 
+    @Modifying
     @Query(value = DBQueries.QUERY_CUSTOMER_COUPONS_BY_PRICE_LIMIT, nativeQuery = true)
     List<Coupon> getCustomerByPriceLimit(@Param("customer_id") int customerId);
+
+    @Modifying
+    @Query(value = DBQueries.QUERY_DELETE_EXPIRED_PURCHASES, nativeQuery = true)
+    void deleteExpiredPurchases(@Param("end_date") Date expirationDate);
+
+    @Modifying
+    @Query(value = DBQueries.QUERY_DELETE_EXPIRED_COUPONS, nativeQuery = true)
+    void deleteExpiredCoupons(@Param("end_date") Date expirationDate);
 
 }

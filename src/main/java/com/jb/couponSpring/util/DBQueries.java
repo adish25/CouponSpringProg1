@@ -41,4 +41,15 @@ public class DBQueries {
             "AND a.id = b.coupons_id \n" +
             "))";
 
+    public static final String QUERY_DELETE_EXPIRED_PURCHASES = "" +
+            "DELETE FROM `coupon-p2`.customers_coupons\n" +
+            "WHERE coupons_id IN \n" +
+            "(\n" +
+            "SELECT id\n" +
+            "FROM `coupon-p2`.coupons\n" +
+            "WHERE end_date < :end_date \n" +
+            ")";
+    public static final String QUERY_DELETE_EXPIRED_COUPONS = "" +
+            "DELETE FROM `coupon-p2`.coupons WHERE `ID` > 0 AND end_date < :end_date";
+
 }
