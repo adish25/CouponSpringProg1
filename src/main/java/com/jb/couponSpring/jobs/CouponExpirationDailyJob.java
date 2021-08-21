@@ -20,7 +20,7 @@ public class CouponExpirationDailyJob {
     // Declaration to allow override of expiration date, for testing and other tasks
     private Date expirationDate = Date.valueOf(LocalDate.now());
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 10000)
     @Transactional
     public void removeExpiredCoupons () {
         System.out.println("*********** CouponExpirationDailyJob is running **************");

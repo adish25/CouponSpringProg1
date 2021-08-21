@@ -172,12 +172,15 @@ public class UseCaseMainTest implements CommandLineRunner {
 
     private void testCustomerService() {
 
+        Customer currCustomer = customerService.getCustomerDetails();
+        System.out.println("\n>>>----- testCustomerService :: Current customer: " + currCustomer);
+
         System.out.println("\n>>>----- add coupon purchase -----");
         Coupon p = Coupon.builder()
                 .title("Club Med 25%")
                 .description("Club Med 25%")
                 .amount(50)
-                .price(500)
+                .price(150)
                 .category(Category.VACATION)
                 .image("http://clubmed25...")
                 .startDate(Date.valueOf(LocalDate.now()))
@@ -191,11 +194,22 @@ public class UseCaseMainTest implements CommandLineRunner {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        System.out.println("\n>>>----- print all customer coupons -----");
+        customerService.getCustomerCoupons().forEach(System.out::println);
+
+        System.out.println("\n>>>----- print all customer coupons by category -----");
+        customerService.getCustomerCoupons(Category.VACATION).forEach(System.out::println);
+
+        System.out.println("\n>>>----- print all customer coupons by max price -----");
+        customerService.getCustomerCouponsByPrice().forEach(System.out::println);
+
     }
 
     private void testCompanyService() throws SQLException {
 
         Company currCompany = companyService.getCompany();
+        System.out.println("\n>>>----- testCompanyService :: Current company: " + currCompany);
 
         System.out.println("\n>>>----- try to add coupon with the same title -----");
         Coupon p1 = Coupon.builder()

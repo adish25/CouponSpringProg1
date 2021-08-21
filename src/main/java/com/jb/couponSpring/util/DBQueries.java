@@ -28,7 +28,7 @@ public class DBQueries {
             "`coupon-p2`.customers_coupons as b \n" +
             "WHERE b.customer_id = :customer_id \n" +
             "AND a.id = b.coupons_id \n" +
-            "AND category_id = :category_id\n";
+            "AND category = :category_id\n";
 
     public static final String QUERY_CUSTOMER_COUPONS_BY_PRICE_LIMIT = "" +
             "SELECT * FROM  `coupon-p2`.coupons\n" +

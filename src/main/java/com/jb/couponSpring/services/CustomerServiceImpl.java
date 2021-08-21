@@ -8,6 +8,7 @@ import com.jb.couponSpring.exceptions.ErrorMsg;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -31,6 +32,7 @@ public class CustomerServiceImpl extends ClientService implements CustomerServic
     }
 
     @Override
+    @Transactional
     public void purchaseCoupon(Coupon coupon) throws CouponSystemException {
 
         if (couponRepository.isPurchaseExists(this.customerID, coupon.getId()) > 0) {
@@ -46,12 +48,7 @@ public class CustomerServiceImpl extends ClientService implements CustomerServic
             throw new CouponSystemException(ErrorMsg.EXPIRED_COUPON);
         }
 
-        //todo change to insert
-        Customer c = this.getCustomerDetails();
-        List <Coupon> coupons = c.getCoupons();
-        coupons.add(coupon);
-        c.setCoupons(coupons);
-        customerRepository.saveAndFlush(c);
+        couponRepository.insertPurchase(this.customerID, coupon.getId());
 
         coupon.setAmount(coupon.getAmount()-1);
         couponRepository.saveAndFlush(coupon);
@@ -69,8 +66,7 @@ public class CustomerServiceImpl extends ClientService implements CustomerServic
     }
 
     @Override
-    public List<Coupon> getCustomerCoupons(double maxPrice) {
-        //todo check
+    public List<Coupon> getCustomerCouponsByPrice() {
         return couponRepository.getCustomerByPriceLimit(this.customerID);
     }
 
