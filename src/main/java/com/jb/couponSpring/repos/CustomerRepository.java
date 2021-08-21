@@ -14,12 +14,4 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
     Customer findByEmailAndPassword(String email, String password);
 
-    @Modifying
-    @Query(value = DBQueries.DELETE_ALL_COUPON_PURCHASES_BY_CUSTOMER, nativeQuery = true)
-    void deleteAllCustomerPurchases(@Param("customer_id") int customerId);
-
-    @Query(value = DBQueries.QUERY_IS_PURCHASE_EXISTS, nativeQuery = true)
-    Integer isPurchaseExists(@Param("customer_id") int customerId, @Param("coupon_id") int couponId);
-
-
 }

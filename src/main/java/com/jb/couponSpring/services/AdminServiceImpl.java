@@ -90,7 +90,7 @@ public class AdminServiceImpl extends ClientService implements AdminService{
     @Transactional
     public void deleteCustomer(int customerId) {
         //todo test delete coupons
-        this.customerRepository.deleteAllCustomerPurchases(customerId);
+        this.couponRepository.deleteAllCustomerPurchases(customerId);
         this.customerRepository.deleteById(customerId);
     }
 

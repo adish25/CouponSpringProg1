@@ -33,7 +33,7 @@ public class CustomerServiceImpl extends ClientService implements CustomerServic
     @Override
     public void purchaseCoupon(Coupon coupon) throws CouponSystemException {
 
-        if (customerRepository.isPurchaseExists(this.customerID, coupon.getId()) > 0) {
+        if (couponRepository.isPurchaseExists(this.customerID, coupon.getId()) > 0) {
             throw new CouponSystemException(ErrorMsg.CUSTOMER_ALREADY_PURCHESED_COUPON);
         }
 

@@ -96,12 +96,78 @@ public class UseCaseMainTest implements CommandLineRunner {
 
         System.out.println(">---------------- UseCaseMainTest::CouponExpirationDailyJob ------------------");
         try {
+            testDailyJob();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return;
+        }
+
+
+    }
+
+    private void testDailyJob() {
+
+        // test data for daily job
+        Coupon p1 = Coupon.builder()
+                .title("Test 1")
+                .description("Test 1")
+                .amount(50)
+                .price(500)
+                .category(Category.VACATION)
+                .image("http://test1...")
+                .startDate(Date.valueOf(LocalDate.now().minusDays(7)))
+                .endDate(Date.valueOf(LocalDate.now().plusDays(1)))
+                .company(companyRepository.getById(2))
+                .build();
+        Coupon p2 = Coupon.builder()
+                .title("Test 2")
+                .description("Test 2")
+                .amount(50)
+                .price(500)
+                .category(Category.VACATION)
+                .image("http://test2...")
+                .startDate(Date.valueOf(LocalDate.now().minusDays(7)))
+                .endDate(Date.valueOf(LocalDate.now().plusDays(1)))
+                .company(companyRepository.getById(2))
+                .build();
+        couponRepository.save(p1);
+        couponRepository.save(p2);
+        p1 = couponRepository.findByCompanyIdAndTitle(2,"Test 1");
+        p2 = couponRepository.findByCompanyIdAndTitle(2,"Test 2");
+        System.out.println(">---------------- testDailyJob::Coupon added before delete ------------------");
+        System.out.println(p1);
+        System.out.println(p2);
+        try {
+            customerService.purchaseCoupon(p1);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            customerService.purchaseCoupon(p2);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            couponExpirationDailyJob.setExpirationDate(Date.valueOf(LocalDate.now().plusDays(2)));
             couponExpirationDailyJob.removeExpiredCoupons();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return;
         }
 
+        System.out.println(">---------------- testDailyJob::Coupon after delete ------------------");
+        couponRepository.findAll().forEach(System.out::println);
+        if (couponRepository.isPurchaseExists(customerService.getCustomerDetails().getId(), p1.getId()) == 0) {
+            System.out.println("******* Purchase also deleted - coupon test 1 ******* ");
+        } else {
+            System.out.println("******* Purchase also deleted - coupon test 1  ******* ");
+        }
+        if (couponRepository.isPurchaseExists(customerService.getCustomerDetails().getId(), p2.getId()) == 0) {
+            System.out.println("******* Purchase also deleted - coupon test 2 ******* ");
+        } else {
+            System.out.println("******* Purchase also deleted - coupon test 2  ******* ");
+        }
     }
 
     private void testCustomerService() {
